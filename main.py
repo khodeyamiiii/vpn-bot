@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from handlers import register_all_handlers
 
 load_dotenv()
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = "7991421382:AAHcUrn-fEHuuHJABCn5gmdYQF4npijJJ6U"
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(bot)
 
