@@ -1,0 +1,21 @@
+{
+  "owner_id": 5936228656,
+  "admins": [],
+  "plans": [
+    {
+      "name": "یک ماه نامحدود",
+      "price": 80000
+    },
+    {
+      "name": "سه ماه نامحدود",
+      "price": 180000
+    },
+    {
+      "name": "شش ماه نامحدود",
+      "price": 300000
+    }
+  ],
+  "test_configs": [],
+  "users": {},
+  "discount_codes": []
+}
