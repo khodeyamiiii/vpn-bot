@@ -65,8 +65,8 @@ def register_all_handlers(dp: Dispatcher, bot):
         if not user.get("services"):
             return await message.answer("⛔ شما هیچ سرویسی ندارید.")
         txt = "\n".join([f"{i+1}. {s['plan']} - {s['status']}" for i, s in enumerate(user["services"])])
-        await message.answer(f"🧾 سرویس‌های شما:
-{txt}")
+        await message.answer(f"""🧾 سرویس‌های شما:
+{txt}""")
 
     @dp.message_handler(lambda msg: msg.text == "💰 کیف پول")
     async def wallet(message: types.Message):
