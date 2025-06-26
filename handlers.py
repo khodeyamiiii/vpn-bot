@@ -112,10 +112,10 @@ def register_all_handlers(dp: Dispatcher, bot):
             InlineKeyboardButton("✅ تأیید خرید", callback_data=f"confirm_{uid}_{request_id}")
         )
         for admin_id in get_admins():
-            await bot.send_message(admin_id, f"🛍 خرید جدید:
+            await bot.send_message(admin_id, f"""🛍 خرید جدید:
 کاربر: {callback_query.from_user.full_name}
 پلن: {plan}
-مبلغ: {amount}", reply_markup=confirm_btn)
+مبلغ: {amount}""", reply_markup=confirm_btn)
         await callback_query.message.answer("⏳ سفارش شما در حال بررسی است.")
 
     @dp.callback_query_handler(lambda c: c.data.startswith("confirm_"))
