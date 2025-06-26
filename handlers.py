@@ -48,8 +48,12 @@ def register_all_handlers(dp: Dispatcher, bot):
         }
         save_json(trials_path, trials)
         save_json(users_db_path, users)
-        await message.answer("✅ اشتراک تست فعال شد:\n📆 مدت: 12 ساعت\n📶 حجم: 512MB\nوضعیت: فعال")
-{config}")
+        await message.answer(f"""✅ اشتراک تست فعال شد:
+📆 مدت: 12 ساعت
+📶 حجم: 512MB
+وضعیت: فعال
+
+{config}""")
         for admin_id in get_admins():
             await bot.send_message(admin_id, f"🧪 تست برای کاربر {message.from_user.full_name} فعال شد.")
 
